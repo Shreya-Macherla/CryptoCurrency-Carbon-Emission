@@ -1,5 +1,5 @@
 # Cryptocurrency–Carbon Emission Connectedness
-[![PLOS ONE](https://img.shields.io/badge/Published-PLOS%20ONE%202023-blue)](https://doi.org/10.1371/journal.pone.0291986)
+[![PLOS ONE](https://img.shields.io/badge/Published-PLOS%20ONE%202023-blue)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318647)
 [![UKRI Funded](https://img.shields.io/badge/Funded-UKRI-orange)](https://www.ukri.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-green)](https://python.org)
 [![NARX](https://img.shields.io/badge/Model-NARX%20%7C%20NARMAX%20%7C%20LSTM-red)]()
@@ -7,7 +7,7 @@
 ## Publication
 
 > **Macherla, S. et al. (2023).** *Nonlinear connectedness between crypto-assets and CO₂ emissions: A complex systems modelling approach.* **PLOS ONE.**
-> DOI: [10.1371/journal.pone.0291986](https://doi.org/10.1371/journal.pone.0291986)
+> DOI: [10.1371/journal.pone.0318647](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318647)
 
 ## Research Question
 
