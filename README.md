@@ -2,7 +2,7 @@
 [![PLOS ONE](https://img.shields.io/badge/Published-PLOS%20ONE%202025-blue)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0318647)
 [![UKRI Funded](https://img.shields.io/badge/Funded-UKRI-orange)](https://www.ukri.org/)
 [![Python](https://img.shields.io/badge/Python-3.8+-green)](https://python.org)
-[![NARX](https://img.shields.io/badge/Model-NARX%20%7C%20NARMAX%20%7C%20LSTM-red)]()
+[![NARX](https://img.shields.io/badge/Model-NARX%20%7C%20NARMAX%20(sysidentpy%20FROLS)-red)]()
 
 ## Publication
 
@@ -42,11 +42,14 @@ output — see "Reproducing these numbers" below.*
 | Step | Method |
 |------|--------|
 | Data preprocessing | Stationarity testing, normalisation, lag selection |
-| Baseline | SARIMAX linear connectedness |
-| Primary model | NARX / NARMAX (Multiple Inputs, Single Output) |
-| Deep learning comparison | LSTM time series forecasting |
-| Evaluation | RMSE, NRMSE across all 10 asset pairs |
-| Architecture search | 2-input, 3-input, 4-input MISO variants |
+| Primary model | NARX / NARMAX via sysidentpy FROLS (Multiple Inputs, Single Output) |
+| Evaluation | RMSE, MAE, MAPE + FROLS Sum-of-ERR per model variant |
+| Architecture search | 2-input, 3-input, 4-input MISO variants × Conventional/Sustainable groups |
+
+Note: no SARIMAX baseline or LSTM model exists in this repo's notebooks (verified — no
+keras/tensorflow import anywhere). If the published paper compares against those, that
+comparison lives in the paper, not in this code; earlier versions of this README implied
+otherwise.
 
 ## Model Performance (real, extracted from the notebooks' own executed output)
 
@@ -64,9 +67,8 @@ reliable columns here, not MAPE.
 
 The `NARMAX_MISO.ipynb`, `MISO_Conventional.ipynb`, `MISO_Sustainable.ipynb`, and per-asset
 notebooks (`BTC_USD_Conventional.ipynb`, etc.) contain further real experiments not yet
-summarised into this table — if you want a SARIMAX/LSTM/NARMAX head-to-head comparison, it needs
-to be built from those notebooks' own outputs the same way this table was, not asserted without
-a source.
+summarised into this table — any head-to-head model comparison needs to be built from those
+notebooks' own outputs the same way this table was, not asserted without a source.
 
 ## Reproducing these numbers
 
@@ -110,7 +112,7 @@ CryptoCurrency-Carbon-Emission/
 
 ## Tools
 
-`Python 3.8` `NumPy` `Pandas` `statsmodels` `SciPy` `Matplotlib` `Seaborn` `TensorFlow` `Jupyter`
+`Python 3.8` `NumPy` `Pandas` `sysidentpy` `statsmodels` `SciPy` `Matplotlib` `Seaborn` `Jupyter`
 
 ## Funding
 
